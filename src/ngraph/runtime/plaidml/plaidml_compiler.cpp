@@ -101,7 +101,7 @@ std::shared_ptr<ngraph::runtime::plaidml::PlaidML_Executable>
     pass_manager.register_pass<ngraph::runtime::plaidml::pass::ConcatSplit>();
     pass_manager.register_pass<ngraph::runtime::plaidml::pass::ReplicateElision>();
     pass_manager.register_pass<ngraph::runtime::plaidml::pass::ReplicateCombination>();
-    pass_manager.register_pass<ngraph::runtime::plaidml::pass::ImplicitBroadcast>();
+    // pass_manager.register_pass<ngraph::runtime::plaidml::pass::ImplicitBroadcast>();
     pass_manager.register_pass<ngraph::runtime::plaidml::pass::LowerConvolutions>();
     if (pass_manager.get_pass_config().get_pass_enable("Winograd"))
     {
